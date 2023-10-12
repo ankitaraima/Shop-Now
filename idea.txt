@@ -1,0 +1,78 @@
+https://getbootstrap.com/docs/4.0/examples/#content
+
+shopper:
+1.products available
+2.update bio
+3.add items
+4.orders 
+5.sale
+6.logout
+
+USER:
+1.Search -> product available
+2.update bio
+3.order-delivery date
+4.cart
+5.logout
+
+
+ADMIN:
+1.user
+2.shopper
+3.logout
+
+<script>
+$(document).ready(function (){
+$('#scp').keyup(function () {
+  var sp= $('#sp').val();
+    var scp= $('#scp').val();
+    if(scp!=sp){
+      $("#error").removeClass("alert alert-success");
+      $("#error").addClass("alert alert-danger");
+      $("#error").html('*Incorrect');
+      
+    }
+    else{
+      $("#error").removeClass("alert alert-danger");
+      $("#error").addClass("alert alert-success");
+      
+      $("#error").html('*correct');
+      
+    }
+});
+  $("#btn1").on("click",function (e) {
+    
+    var sn= $('#sn').val();
+    var se= $('#se').val();
+    var su= $('#su').val();
+    var sp= $('#sp').val();
+    var scp= $('#scp').val();
+    var sph= $('#sph').val();
+    var ssh= $('#ssh').val();
+    var sa= $('#sa').val();
+    var ss= $('#ss').val();
+    alert(ch);
+   
+    $.ajax({
+      url:"ajax-SellerSignUp.php",
+      type:"POST",
+      data:{sn:sn,se:se,su:su,sp:sp,sph:sph,ssh:ssh,sa:sa,ss:ss},
+      success: function(data){
+        if(data==1){
+         alert("Success");
+         $(location).attr('href','SellerProducts.php');
+        }
+       
+        else{
+          $("#errorinsubmission").addClass("alert alert-danger");
+          $("#errorinsubmission").html('Something Went Wrong');
+        }
+      }
+    });
+  
+  
+  });
+ 
+  });
+
+</script>

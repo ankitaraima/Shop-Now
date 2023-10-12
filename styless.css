@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+	/* position: absolute; */
+}
+
+#header{
+	position: absolute;
+	font-size: 13vw; 
+	/* font-family:  'Dancing Script', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode'; */
+	font-style: oblique 40deg;
+	font-weight: bolder; 
+	color: rgba(255, 255, 255, 0);
+    font-family: "Satisfy variant0", Tofu;
+	 margin: 0vh 0 0 8vh;
+	 -webkit-text-stroke: 4px rgba(255, 255, 255, 0.842);
+    /* color: rgb(238, 53, 53); */
+}
+#hbg{ 
+    top: 0px;
+	left: 0px;
+	width: 100%;
+	display: flex;
+	height: 312.5px;
+	/* background:rgb(10, 165, 255); */
+	/* background:rgb(6, 94, 145); */
+    
+
+}
